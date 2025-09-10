@@ -263,9 +263,9 @@ PRODUCT_COPY_FILES += \
 
 # Keymint
 PRODUCT_PACKAGES += \
-    android.hardware.security.keymint-V1-ndk_platform.vendor:64 \
-    android.hardware.security.secureclock-V1-ndk_platform.vendor:64 \
-    android.hardware.security.sharedsecret-V1-ndk_platform.vendor:64 \
+    android.hardware.security.keymint-V1-ndk.vendor:64 \
+    android.hardware.security.secureclock-V1-ndk.vendor:64 \
+    android.hardware.security.sharedsecret-V1-ndk.vendor:64 \
     android.hardware.security.rkp-V3-ndk.vendor \
     libcppbor_external.vendor:64
 
@@ -514,6 +514,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libwifi-hal-wrapper:64 \
     wpa_supplicant \
+    lib_driver_cmd_mt66xx \
     hostapd \
     android.hardware.wifi-service \
     libkeystore-wifi-hidl:64 \
