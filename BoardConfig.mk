@@ -158,6 +158,7 @@ TARGET_BOARD_PLATFORM := mt6789
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/properties/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/properties/vendor.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/properties/system.prop
 
 # Recovery
 BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
