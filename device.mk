@@ -11,6 +11,9 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/vabc_features.mk)
 
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-lineage
+
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS := \
     boot \
