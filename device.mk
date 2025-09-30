@@ -169,10 +169,10 @@ $(call inherit-product, vendor/sony/dolby/setup.mk)
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm-service.clearkey:64
+    com.android.hardware.drm.clearkey
 
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4.vendor:64
+    android.hardware.drm@1.4.vendor
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -182,7 +182,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 
 # FastbootD
 PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.1-impl-mock:64 \
+    android.hardware.fastboot-service.example_recovery \
     fastbootd:64
 
 # Fingerprint
