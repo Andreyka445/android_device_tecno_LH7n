@@ -92,6 +92,9 @@ PRODUCT_PACKAGES += \
     DSPVolumeSynchronizer \
     MtkInCallService
 
+PRODUCT_PACKAGES += \
+    RemovePkgs
+
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
