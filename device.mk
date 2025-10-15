@@ -148,7 +148,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.3-service \
-    android.hardware.memtrack-service.mediatek-mali
+    android.hardware.memtrack-service.mediatek
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@4.0.vendor:64 \
@@ -248,7 +248,7 @@ $(call inherit-product-if-exists, vendor/JamesDSP/config.mk)
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.lights-service.transsion
+    android.hardware.lights-service.millennium
     
 # Keylayout
 PRODUCT_COPY_FILES += \
@@ -476,7 +476,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/transsion
+    hardware/millennium
 
 # Thermal
 PRODUCT_PACKAGES += \
@@ -487,7 +487,7 @@ PRODUCT_COPY_FILES += \
     
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator-service.transsion    
+    android.hardware.vibrator-service.millennium    
 
 # VNDK
 PRODUCT_PACKAGES += \
