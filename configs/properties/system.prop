@@ -92,7 +92,7 @@ zygote.critical_window.minute=10
 # mistos
 ro.mist.display=1080 x 2460, 120 hz
 ro.mist.battery=6000 mAh
-ro.mist.soc=Snapdragon® 732G
+ro.mist.soc=MTK HELIO G99
 ro.mist.camera=50MP + 0.08MP
 ro.mist.front=8MP
 ro.mist.platform=mt6789
