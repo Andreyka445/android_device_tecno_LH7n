@@ -8,13 +8,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from device makefile.
-$(call inherit-product, device/tecno/LH7n/device.mk)
+$(call inherit-product, device/lineage/LH7n/device.mk)
 
 # Inherit some common mica stuff.
 $(call inherit-product, vendor/mica/config/common_full_phone.mk)
 
 BOARD_VENDOR := TECNO
-PRODUCT_NAME := mica_LH7n
+PRODUCT_NAME := lineage_LH7n
 PRODUCT_DEVICE := LH7n
 PRODUCT_MANUFACTURER := TECNO
 PRODUCT_BRAND := TECNO
