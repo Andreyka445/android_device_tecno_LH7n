@@ -4,4 +4,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_LH7n.mk
+    $(LOCAL_DIR)/euclid_LH7n.mk
