@@ -205,8 +205,8 @@ PRODUCT_PACKAGES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health-service.mediatek \
-    android.hardware.health-service.mediatek-recovery \
+    android.hardware.health-service.example \
+    android.hardware.health-service.example-recovery \
     charger_res_images_vendor
 
 # HIDL
@@ -519,6 +519,8 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     libkeystore-wifi-hidl:64 \
     libkeystore-engine-wifi-hidl:64
+
+$(call soong_config_set_bool,wpa_supplicant_8,wifi_disable_multi_akm,true)
 
 PRODUCT_PACKAGES += \
     android.hardware.tetheroffload.config@1.0.vendor:64 \
