@@ -10,11 +10,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile.
 $(call inherit-product, device/tecno/LH7n/device.mk)
 
-# Inherit some common mica stuff.
-$(call inherit-product, vendor/mica/config/common_full_phone.mk)
+# Inherit some common lineage stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 BOARD_VENDOR := TECNO
-PRODUCT_NAME := mica_LH7n
+PRODUCT_NAME := lineage_LH7n
 PRODUCT_DEVICE := LH7n
 PRODUCT_MANUFACTURER := TECNO
 PRODUCT_BRAND := TECNO
@@ -28,3 +28,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Time
 LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
+
+# GMS
+WITH_GAPPS := true
