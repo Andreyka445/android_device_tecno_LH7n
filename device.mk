@@ -504,6 +504,9 @@ $(call soong_config_set,android_hardware_mediatek_usb,audio_accessory_supported,
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.mediatek \
     android.hardware.usb.gadget-service.mediatek
+    
+# userdata
+PRODUCT_FS_COMPRESSION := 1
 
 # vndservice
 PRODUCT_PACKAGES += \
