@@ -8,10 +8,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from device makefile.
-$(call inherit-product, device/lineage/LH7n/device.mk)
+$(call inherit-product, device/tecno/LH7n/device.mk)
 
-# Inherit some common mica stuff.
-$(call inherit-product, vendor/mica/config/common_full_phone.mk)
+# Inherit some common  stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 BOARD_VENDOR := TECNO
 PRODUCT_NAME := lineage_LH7n
@@ -28,15 +28,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Time
 LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
-
-# Mistos flags
-MISTOS_MAINTAINER := CRAZY_JOKER67
-WITH_GMS := true
-TARGET_USES_PICO_GAPPS := true
-TARGET_ENABLE_BLUR := true
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_SCREEN_HEIGHT := 2460
-TARGET_SCREEN_WIDTH := 1080
-MIST_BUILD_TYPE := UNOFFICIAL
-PRODUCT_NO_CAMERA := false
-TARGET_DISABLE_EPPE := true
