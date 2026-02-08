@@ -11,10 +11,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/tecno/LH7n/device.mk)
 
 # Inherit some common lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
 BOARD_VENDOR := TECNO
-PRODUCT_NAME := lineage_LH7n
+PRODUCT_NAME := infinity_LH7n
 PRODUCT_DEVICE := LH7n
 PRODUCT_MANUFACTURER := TECNO
 PRODUCT_BRAND := TECNO
@@ -32,3 +32,7 @@ LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
 # los
 PERF_ANIM_OVERRIDE := true
 TARGET_DISABLE_EPPE := true
+
+# Infinity flags
+INFINITY_MAINTAINER := "CRAZY_JOKER67"
+WITH_GAPPS := true

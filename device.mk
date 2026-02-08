@@ -90,6 +90,9 @@ PRODUCT_PACKAGES += \
     DSPVolumeSynchronizer \
     MtkInCallService
 
+PRODUCT_PACKAGES += \
+    RemovePkgs
+
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
@@ -534,3 +537,6 @@ PRODUCT_COPY_FILES += \
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/tecno/LH7n/LH7n-vendor.mk)
+
+# Signing
+include vendor/infinity-priv/keys/keys.mk
