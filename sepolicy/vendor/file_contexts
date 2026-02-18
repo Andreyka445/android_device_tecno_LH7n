@@ -52,7 +52,7 @@
 /sys/devices/platform/(odm/odm:tran_battery|tran_battery)/tran_cam                              u:object_r:sysfs_tran_cam_file:s0
 
 # Tranfs
-/dev/block/sdc62                                                                        u:object_r:tranfs_block_device:s0
+/dev/block/by-name/tranfs                                                                        u:object_r:tranfs_block_device:s0
 
 # Trustonic
 /(vendor|system/vendor)/bin/kmsetkey_ca.trustonic                                                  u:object_r:trustonic_kmsetkey_ca_exec:s0
