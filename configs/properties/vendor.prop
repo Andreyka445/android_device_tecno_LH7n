@@ -201,7 +201,6 @@ persist.arm64.memtag.system_server=off
 
 # MTK Stuff
 persist.vendor.factory.GB2312=no
-ro.limit_cache.support=1
 ro.netflix.bsp_rev=MTK6789-35965-1
 ro.vendor.efuse_writer_enable=1
 ro.vendor.mml.mtk_mml_support=0
