@@ -10,11 +10,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile.
 $(call inherit-product, device/tecno/LH7n/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Hatsune Miku  stuff.
+$(call inherit-product, vendor/miku/build/product/miku_product.mk)
 
 BOARD_VENDOR := TECNO
-PRODUCT_NAME := lineage_LH7n
+PRODUCT_NAME := miku_LH7n
 PRODUCT_DEVICE := LH7n
 PRODUCT_MANUFACTURER := TECNO
 PRODUCT_BRAND := TECNO
@@ -28,3 +28,11 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Time
 LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
+
+# los
+PERF_ANIM_OVERRIDE := true
+TARGET_DISABLE_EPPE := true
+
+# Miku
+MIKU_GAPPS := true
+MIKU_MASTER := CRAZY_JOKER67
