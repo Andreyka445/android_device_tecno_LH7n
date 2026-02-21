@@ -60,6 +60,18 @@
 # USB OTG
 /sys/devices/platform/odm/odm:tran_battery/OTG_CTL                                     u:object_r:sysfs_OTG_CTL_file:s0
 
+ # codec2 service mtk
+/vendor/bin/hw/android\.hardware\.media\.c2-mtk-service  u:object_r:hal_codec2_mtk_exec:s0
+
+# maybe
+/vendor/etc/audio_.*\.xml                u:object_r:vendor_configs_file:s0
+
+# maybe
+/vendor/etc/audio(/.*)?                  u:object_r:vendor_configs_file:s0
+
+# audio service
+/vendor/etc/audio_device\.xml            u:object_r:vendor_configs_file:s0
+
 # Vibrator
 /(vendor|system/vendor)/bin/hw/android\.hardware\.vibrator-service\.millennium           u:object_r:hal_vibrator_default_exec:s0
 /(vendor|system\/vendor)/bin/hw/android\.hardware\.vibrator@1\.0-service              u:object_r:hal_vibrator_default_exec:s0
