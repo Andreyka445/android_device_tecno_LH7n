@@ -280,17 +280,16 @@ ro.soc.model=MT6789V/CD
 # SurfaceFlinger
 debug.sf.auto_latch_unsignaled=0
 debug.sf.disable_client_composition_cache=1
-debug.sf.early.app.duration=16600000
-debug.sf.early.sf.duration=16600000
-debug.sf.earlyGl.app.duration=16600000
-debug.sf.earlyGl.sf.duration=16600000
+debug.sf.high_fps_early_gl_phase_offset_ns=-12666667
+debug.sf.high_fps_early_phase_offset_ns=-12666667
+debug.sf.high_fps_late_app_phase_offset_ns=-8000000
+debug.sf.high_fps_late_sf_phase_offset_ns=-12666667
 debug.sf.enable_egl_image_tracker=0
-debug.sf.enable_gl_backpressure=0
+debug.sf.enable_gl_backpressure=1
 debug.sf.enable_hwc_vds=0
 debug.sf.frame_rate_multiple_threshold=120
-debug.sf.hwc.min.duration=18500000
-debug.sf.late.app.duration=16600000
-debug.sf.late.sf.duration=10500000
+ro.surface_flinger.vsync_event_phase_offset_ns=8400000
+ro.surface_flinger.vsync_sf_event_phase_offset_ns=-10933333
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.treat_170m_as_sRGB=1
 debug.sf.region_sampling_duration_ns=8333333
@@ -304,7 +303,6 @@ ro.surface_flinger.protected_contents=true
 ro.surface_flinger.set_display_power_timer_ms=1000
 ro.surface_flinger.uclamp.min=328
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
-
 
 # TEE
 ro.vendor.mtk_svp_on_mtee_support=2
