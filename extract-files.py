@@ -9,6 +9,11 @@ from extract_utils.fixups_blob import (
     blob_fixups_user_type,
 )
 
+from extract_utils.fixups_lib import (
+    lib_fixups,
+    lib_fixups_user_type,
+)
+
 from extract_utils.main import (
     ExtractUtils,
     ExtractUtilsModule,
@@ -21,6 +26,22 @@ namespace_imports = [
     'hardware/mediatek/libaedv',
     'hardware/millennium',
 ]
+
+def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}_{partition}' if partition == 'vendor' else None
+
+lib_fixups: lib_fixups_user_type = {
+    **lib_fixups,
+    (
+        'libtflite_mtk',
+        'libneuron_graph_delegate.mtk',
+        'vendor.mediatek.hardware.apuware.apusys@2.0',
+        'vendor.mediatek.hardware.apuware.apusys@2.1',
+        'vendor.mediatek.hardware.apuware.hmp@1.0',
+        'vendor.mediatek.hardware.apuware.utils@2.0',
+        'vendor.mediatek.hardware.videotelephony@1.0'
+    ): lib_fixup_vendor_suffix,
+}
 
 blob_fixups: blob_fixups_user_type = {
     ('vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service', 'vendor/lib64/hw/mt6789/vendor.mediatek.hardware.pq@2.15-impl.so'): blob_fixup()
@@ -52,7 +73,7 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/hw/hwcomposer.mtk_common.so': blob_fixup()
         .patchelf_version('0_17_2')
         .add_needed('libprocessgroup_shim.so'),
-    ('vendor/lib64/mt6789/lib3a.flash.so', 'vendor/lib64/mt6789/lib3a.ae.stat.so', 'vendor/lib64/mt6789/lib3a.sensors.flicker.so',
+    ('system_ext/lib64/libarmnn_ndk.mtk.so', 'vendor/lib64/mt6789/lib3a.flash.so', 'vendor/lib64/mt6789/lib3a.ae.stat.so', 'vendor/lib64/mt6789/lib3a.sensors.flicker.so',
      'vendor/lib64/mt6789/lib3a.sensors.color.so', 'vendor/lib64/mt6789/libaaa_ltm.so', 'vendor/lib64/lib3a.ae.pipe.so',
      'vendor/lib64/libSQLiteModule_VER_ALL.so'): blob_fixup()
         .add_needed('liblog.so'),
@@ -113,6 +134,7 @@ module = ExtractUtilsModule(
     'LH7n',
     'tecno',
     blob_fixups=blob_fixups,
+    lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
     add_firmware_proprietary_file=True,
 )
