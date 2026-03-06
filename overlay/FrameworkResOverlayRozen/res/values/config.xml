@@ -319,12 +319,6 @@
     <!-- Should the pinner service pin the Camera application? -->
     <bool name="config_pinnerCameraApp">false</bool>
 
-    <!-- Flag indicating whether the surface flinger is inefficient
-         at performing a blur.  Used by parts of the UI to turn off
-         the blur effect where it isn't worth the performance hit.
-         As of Honeycomb, blurring is not supported anymore. -->
-    <bool name="config_sf_slowBlur">false</bool>
-
     <!-- List of comma separated package names for which we the system will not show crash like
          tts, etc. dialogs. -->
     <string name="config_appsNotReportingCrashes">com.google.android.tts</string>   
@@ -363,15 +357,8 @@
          available on some devices. -->
     <bool name="config_enableHapticTextHandle">true</bool>
    
-    <!-- Flag indicating whether the surface flinger has limited
-         alpha compositing functionality in hardware.  If set, the window
-         manager will disable alpha trasformation in animations where not
-         strictly needed. -->
-    <bool name="config_sf_limitedAlpha">true</bool>
-
     <!-- Whether device uses power button fingerprint sensor or not -->
     <bool name="config_is_powerbutton_fps">true</bool>
-
 
      <!-- An array of arrays of side fingerprint sensor properties relative to each display.
      Note: this value is temporary and is expected to be queried directly
@@ -386,7 +373,6 @@
           <item>1056</item>  <!-- sensorLocationY -->
           <item>210</item>  <!-- sensorRadius -->
      </array>
-
 
     <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
          in hardware. -->
