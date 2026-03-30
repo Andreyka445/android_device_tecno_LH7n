@@ -947,18 +947,6 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.7.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.8.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.9.so
 
-# MEOW
-vendor/lib64/egl/libGLES_meow.so
-vendor/lib64/egl/libMEOW_data.so
-vendor/lib64/egl/libMEOW_gift.so
-vendor/lib64/egl/libMEOW_qt.so
-vendor/lib64/egl/libMEOW_trace.so
-
-# Frame Rate Control
-vendor/lib64/libDefaultFpsActor.so
-vendor/lib64/libFrameRecord.so
-vendor/lib64/libNoFpsActor.so
-
 # DRM
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
