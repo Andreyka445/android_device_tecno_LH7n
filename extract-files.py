@@ -25,6 +25,7 @@ namespace_imports = [
     'hardware/mediatek/libmtkperf_client',
     'hardware/mediatek/libaedv',
     'hardware/millennium',
+    'hardware/millennium/libtranlog',
 ]
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):

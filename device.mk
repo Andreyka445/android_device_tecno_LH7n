@@ -471,7 +471,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/mediatek/libaedv \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/millennium
+    hardware/millennium \
+    hardware/millennium/libtranlog
 
 # Thermal
 PRODUCT_PACKAGES += \
